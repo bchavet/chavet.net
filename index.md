@@ -1,16 +1,17 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: default
 ---
 
-{%- if site.recipes.size > 0 -%}
-  <ul>
-    {%- for recipe in site.recipes -%}
-      <li>
-        <a href="{{ recipe.url | relative_url }}">{{ recipe.name | escape }}</a>
-      </li>
-    {%- endfor -%}
-  </ul>
-{%- endif -%}
+{% assign categories = site.recipes | group_by: "category" | sort: "name" | uniq %}
+
+{% for category in categories %}
+<h3>{{ category.name }}</h3>
+<ul>
+  {% assign recipes = category.items | sort: "name" %}
+  {% for recipe in recipes %}
+    <li>
+      <a href="{{ recipe.url | relative_url }}">{{ recipe.name | escape }}</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endfor %}

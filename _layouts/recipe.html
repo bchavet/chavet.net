@@ -41,16 +41,18 @@ layout: default
     </div>
     {% endif %}
 
-    {{content}}
-
     <!-- instructions -->
-    {% if page.instructions %}
     <div itemprop="recipeInstructions">
         <h3>Instructions</h3>
-        <ol>
-            <li>{{ page.instructions | join: '<li> <li>' }}</li>
-        </ol>
+        {% if page.instructions.size > 1 %}
+            <ol>
+                <li>{{ page.instructions | join: '</li><li>' }}</li>
+            </ol>
+        {% else %}
+            <p>{{ page.instructions }}</p>
+        {% endif %}
     </div>
-    {% endif %}
+
+    {{content}}
 
 </div>
