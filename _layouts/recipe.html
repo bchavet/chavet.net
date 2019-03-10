@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<!-- recipe post-content -->
+<div class="post-content">
+
+    <h2>{{ page.name }}</h2>
+
+    <!-- ingredients -->
+    {% if page.ingredients %}
+    <div>
+        <h3>Ingredients</h3>
+        <ul>
+            {% for ingredient in page.ingredients %}
+                <li itemprop="ingredients">{{ ingredient[1] }} {{ ingredient[0] }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    {% if page.dry_ingredients %}
+    <div>
+        <h3>Dry Ingredients</h3>
+        <ul>
+            {% for ingredient in page.dry_ingredients %}
+                <li itemprop="ingredients">{{ ingredient[1] }} {{ ingredient[0] }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    {% if page.wet_ingredients %}
+    <div>
+        <h3>Wet Ingredients</h3>
+        <ul>
+            {% for ingredient in page.wet_ingredients %}
+                <li itemprop="ingredients">{{ ingredient[1] }} {{ ingredient[0] }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    {{content}}
+
+    <!-- instructions -->
+    {% if page.instructions %}
+    <div itemprop="recipeInstructions">
+        <h3>Instructions</h3>
+        <ol>
+            <li>{{ page.instructions | join: '<li> <li>' }}</li>
+        </ol>
+    </div>
+    {% endif %}
+
+</div>
