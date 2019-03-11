@@ -2,6 +2,8 @@
 layout: default
 ---
 
+Test
+
 {% assign categories = site.recipes | group_by: "category" | sort: "name" | uniq %}
 
 {% for category in categories %}
