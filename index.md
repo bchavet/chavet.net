@@ -6,7 +6,7 @@ layout: default
 
 {% for category in categories %}
 <h3>{{ category.name }}</h3>
-<ul>
+<ul class="recipe-list">
   {% assign recipes = category.items | sort: "name" %}
   {% for recipe in recipes %}
     <li>
