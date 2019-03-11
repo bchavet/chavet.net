@@ -4,9 +4,22 @@
 @import "{{ site.theme }}";
 
 ul.recipe-list {
+    font-size: 20px;
+
     @media (min-width: 600px) {
+        font-size: 16px;
         columns: 2;
         -webkit-columns: 2;
         -moz-columns: 2;
+    }
+
+    li {
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        @media (min-width: 600px) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
 }
