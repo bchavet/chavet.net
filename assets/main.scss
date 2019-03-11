@@ -4,7 +4,9 @@
 @import "{{ site.theme }}";
 
 ul.recipe-list {
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
+    @media (min-width: 600px) {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
 }
