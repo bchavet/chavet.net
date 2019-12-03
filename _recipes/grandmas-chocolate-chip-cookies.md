@@ -3,9 +3,9 @@ name: Grandma's Chocolate Chip Cookies
 layout: recipe
 category: Desserts
 ingredients:
-    Butter: 1.5 cup, softened
-    White Sugar: 1.5 cups
-    Light Brown Sugar: 1.5 cups
+    Butter: 1½ cups, softened
+    White Sugar: 1½ cups
+    Light Brown Sugar: 1½ cups
     Eggs: 4
     Vanilla: 2 tsp
     Baking Soda: 2 tsp
