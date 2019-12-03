@@ -19,4 +19,6 @@ instructions:
     - Mix in baking soda and salt
     - Mix in flour
     - Change beaters to dough hook, and mix in oatmeal and chocolate chips
+    - Drop by spoonsful on ungreased cookie sheet in 350 degree oven for 10-15 minutes
+    - Cool a few minutes on the pan before removing. Then, cool on rack or paper towels
 ---
